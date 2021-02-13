@@ -34,7 +34,7 @@ body {
 .accordion .contentBx .label::before {
   content: '+';
   position: absolute;
-  top: 50%;
+  top: 51%;
   right: 0px; 
   font-weight: 900;
   transform: translateY(-50%);
@@ -78,10 +78,16 @@ body {
   .label {
     font-size: 16px;
   }
+  .accordion .contentBx .label::before {
+    padding: 7px 16px;
+  }
 }
 @media screen and (max-width: 550px) {
   .label {
     font-size: 14px;
     padding: 0;
+  }
+  .accordion .contentBx .label::before {
+    padding: 6px 16px;
   }
 }
