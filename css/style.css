@@ -74,3 +74,14 @@ body {
 .contentBx.active .label::before {
   border-radius: 0px 5px 0px 0px;
 }
+@media screen and (max-width: 720px) {
+  .label {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .label {
+    font-size: 14px;
+    padding: 0;
+  }
+}
