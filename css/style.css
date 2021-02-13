@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #bedfe8;
+}
+.accordion {
+  max-width: 800px;
+}
+.accordion .contentBx {
+  position: relative;
+  margin: 15px 20px;
+}
+
+.label {
+  font-size: 18px;
+  -webkit-box-shadow: 1px 4px 6px -7px #000000;
+  box-shadow: 1px 4px 6px -7px #000000;
+}
+.accordion .contentBx .label { 
+  position: relative;
+  padding: 15px 15px 15px 20px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px 5px 5px 5px;
+}
+.accordion .contentBx .label::before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 0px; 
+  font-weight: 900;
+  transform: translateY(-50%);
+  font-size: 1.5em; 
+  font-size: 30px;
+  color: #fff;
+  background: rgb(23, 182, 36);
+  padding: 8.5px 16px;
+  border-radius: 0px 5px 5px 0px;
+}
+.accordion .contentBx.active .label::before{
+  content: '-';
+  top: 50%;
+  font-weight: 900;
+  right: 0px;
+  font-size: 30px;
+  transform: translateY(-50%);
+  padding: 8.5px 19px;
+}
+.accordion .contentBx .content {
+  position: relative;
+  background: rgb(240, 238, 238);
+  height: 0; 
+  overflow: hiden;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+.accordion .contentBx.active .content {
+  height: 100px;
+  padding: 15px 10px; 
+  border-radius: 0px 0px 5px 5px;
+} 
+.contentBx.active .label {
+  color:rgb(23, 182, 36);
+  border-radius: 5px 5px 0px 0px;
+}
+.contentBx.active .label::before {
+  border-radius: 0px 5px 0px 0px;
+}
