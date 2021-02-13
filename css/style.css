@@ -74,12 +74,16 @@ body {
 .contentBx.active .label::before {
   border-radius: 0px 5px 0px 0px;
 }
+
 @media screen and (max-width: 720px) {
   .label {
     font-size: 16px;
   }
   .accordion .contentBx .label::before {
     padding: 7px 16px;
+  }
+  .accordion .contentBx.active .label::before {
+    padding: 7px 19.5px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -89,5 +93,11 @@ body {
   }
   .accordion .contentBx .label::before {
     padding: 6px 16px;
+  }
+  .content {
+    font-size: 14px;
+  }
+  .accordion .contentBx.active .label::before {
+    padding: 6px 19.5px;
   }
 }
